@@ -1,4 +1,5 @@
 # EC2 Public Server
+count = 3
 resource "aws_instance" "lms-web-server" {   
   ami           = "ami-0e001c9271cf7f3b9" # Ubuntu AMI 
   instance_type = "t2.micro"
