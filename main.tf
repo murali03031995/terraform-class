@@ -12,7 +12,7 @@ resource "aws_vpc" "lms-vpc" {
 resource "aws_subnet" "lms-pub-sn" {
   vpc_id     = aws_vpc.lms-vpc.id
   cidr_block = "10.0.1.0/24"
-  availability_zone = "us-east-1a"
+  availability_zone = "us-west-1b"
   map_public_ip_on_launch = "true"
 
   tags = {
@@ -24,7 +24,7 @@ resource "aws_subnet" "lms-pub-sn" {
 resource "aws_subnet" "lms-pvt-sn" {
   vpc_id     = aws_vpc.lms-vpc.id
   cidr_block = "10.0.2.0/24"
-  availability_zone = "us-east-1b"
+  availability_zone = "us-west-1c"
   map_public_ip_on_launch = "false"
 
   tags = {
